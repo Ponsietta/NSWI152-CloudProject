@@ -1,4 +1,4 @@
-# IMG.Convert
+# IMG.Convert - Marzia Cutajar
 
 ## General Description
 
