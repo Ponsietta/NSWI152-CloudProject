@@ -1,0 +1,59 @@
+body {
+	font-family: Verdana, Helvetica, sans-serif;
+	//background-color: #DDDDDD;
+	margin: 0;
+}
+
+header{
+	background-color: #DDDDDD;
+}
+
+.container { 
+	//width:50%;
+	width:550px;
+	margin:0 auto; 
+	padding:30px;
+}
+
+.btn{
+	width: 150px;
+    padding: 15px;
+    font-size: 16px;
+	cursor: pointer;
+}
+
+input:disabled.btn:hover,
+input:disabled.btn:active,
+input:disabled.btn:focus {
+  opacity:60%;
+  cursor: default;
+}
+
+fieldset#optionalSettings{
+	display: block;
+    //border: 1px #aaa solid;
+    padding: 10px;
+	margin: 5px 0;
+	font-size: 13px;
+}
+
+fieldset#optionalSettings input {
+	width: 100px;
+	height: 25px;
+}
+
+legend{
+	display: inline;
+	color: #000;
+	font-size: 15px;
+}
+
+footer{
+	bottom: 0;
+    text-align: center;
+    background-color: #DDDDDD;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+	line-height: 50px;
+}

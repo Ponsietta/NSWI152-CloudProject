@@ -1,0 +1,70 @@
+<doctype html>
+{% autoescape true %}
+<html>
+  <head>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+		<link type="text/css" rel="stylesheet" href="/stylesheets/toastr.css" />
+		<script src="/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+		<script src="/js/toastr.js" type="text/javascript"></script>
+		<script src="/js/index.js" type="text/javascript"></script>
+		<title>IMG.Convert</title>
+  </head>	
+  <body>
+	<header style="height: 50px;">
+		<a style="float: right;padding-right: 20px;margin: 10px;" href="{{ url }}">{{ url_linktext }}</a>
+	</header>
+	<div style="background-color:azure; text-align:center;padding:30px">
+		<h2 class="text-center">IMG.Convert - Convert your images!</h2>
+	</div>
+
+	<div class="container col-md-12">			
+		<form action="/convert" method="post" id="convertForm" enctype="multipart/form-data">
+			<div>
+				<p>Select images to convert</p>
+
+				<input type="file" name="inputImgs" id="inputFiles" accept="image/*" multiple required />
+			</div>
+			<div>
+				<p>Select your preferred output format:</p>		
+				<div>
+					<input type="radio" id="jpeg" value="jpeg" name="newFormat" required />
+					<label for="jpeg">JPEG</label>
+				</div>
+
+				<div>
+					<input type="radio" id="png" value="png" name="newFormat" required />
+					<label for="png">PNG</label>
+				</div>               
+				<br />
+
+				<fieldset id="optionalSettings">
+					<legend>Optional Settings</legend>
+					<div style="padding-left:15px">
+						<div>
+							Size: 
+							<input type="number" name="newWidth" pattern="[0-9]{0,4}" min="1" max="4000" /> x
+							<input type="number" name="newHeight" pattern="[0-9]{0,4}" min="1" max="4000" /> pixels
+						</div>
+					</div>
+				</fieldset>
+				<br />
+			{% if url_linktext == 'Login' %}
+					<div>
+						<p style="font-size:14px;">Enter your email address below to be notified when conversion is complete!</p>
+						<input style="margin-bottom: 15px; height:30px;width:250px" type="email" id="email" name="email" required />
+					</div>
+			{% endif %}
+				<input class="btn" style="display:block;" type="submit" id="submitBtn" value="Convert Images">
+			</div>
+		</form>
+		
+	</div>
+	<footer>
+		NSWI152 - Marzia Cutajar
+	</footer>
+  </body>
+</html>
+{% endautoescape %}
+
+
+
