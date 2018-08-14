@@ -1,6 +1,6 @@
 # IMG.Convert
 
-### Marzia Cutajar
+### A project for course NSWI152 by Marzia Cutajar
 
 ## General Description
 
